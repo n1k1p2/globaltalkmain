@@ -21,15 +21,11 @@ const onLogout = () => {
     <li class="navbar__item">
       <a href="#" class="navbar__link"><i data-feather="message-square"></i><span>Messages</span></a>        
     </li>
+    
     <li class="navbar__item">
-      <a href="#" class="navbar__link"><i data-feather="users"></i><span>Customers</span></a>        
+      <a href="#" class="navbar__link"><i data-feather="folder"></i><span>Tasks</span></a>        
     </li>
-    <li class="navbar__item">
-      <a href="#" class="navbar__link"><i data-feather="folder"></i><span>Projects</span></a>        
-    </li>
-    <li class="navbar__item">
-      <a href="#" class="navbar__link"><i data-feather="archive"></i><span>Resources</span></a>        
-    </li>
+    
     <li class="navbar__item">
       <a href="#" class="navbar__link"><i data-feather="help-circle"></i><span>Help</span></a>        
     </li>

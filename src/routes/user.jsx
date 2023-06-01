@@ -5,24 +5,21 @@ import {endSession, getSession, isLoggedIn} from "../session";
 import Navbar from "../components/navbar";
 import { db } from "../firebase";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { uid } from "uid";
+import { getDatabase, ref, child, get } from "firebase/database";
+import React from 'react';
+import { onValue } from 'firebase/database';
+
 export default function User() {
-
   let navigate = useNavigate();
-  
   let [email, setEmail] = useState("");
-
   useEffect(() => {
     if (!isLoggedIn()) {
       navigate("/login");
     }
-
     let session = getSession();
     setEmail(session.email);
-
     console.log("Your access token is: " + session.accessToken);
   }, [navigate]);
-
   const onLogout = () => {
     endSession();
     navigate("/login");
@@ -31,6 +28,7 @@ export default function User() {
   return (
     <Container maxWidth="xs" sx={{mt: 2}}>
       <Navbar />
+      
     </Container>
   )
 }
