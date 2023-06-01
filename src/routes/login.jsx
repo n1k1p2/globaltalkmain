@@ -49,8 +49,8 @@ export default function Login() {
       <Box
         component="img"
         sx={{
-          maxHeight: { xs: 200, md: 167 },
-          maxWidth: { xs: 350, md: 250 },
+          maxHeight: { xs: 200, md: 267 },
+          maxWidth: { xs: 500, md: 550 },
         }}
         alt="The house from the offer."
         src={globaltalkimage}
