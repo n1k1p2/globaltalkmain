@@ -45,7 +45,7 @@ export default function Login() {
   }
 
   return (
-    <Container maxWidth="xs" id="login-container" sx={{mt: 5,display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', }}>
+    <Container maxWidth="xs" id="login-container" sx={{mt: 5,display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', }}>
       <Box
         component="img"
         sx={{
