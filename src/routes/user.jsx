@@ -5,10 +5,11 @@ import {endSession, getSession, isLoggedIn} from "../session";
 import Navbar from "../components/navbar";
 import { db } from "../firebase";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { getDatabase, ref, child, get } from "firebase/database";
+import { getDatabase, ref, child, get, limitToLast } from "firebase/database";
 import React from 'react';
-import { onValue } from 'firebase/database';
-
+import { onValue, query, } from 'firebase/database';
+import { RealtimeData } from "../realtimeData/index";
+import './user.css';
 export default function User() {
   let navigate = useNavigate();
   let [email, setEmail] = useState("");
@@ -24,11 +25,20 @@ export default function User() {
     endSession();
     navigate("/login");
   }
-
+  getData();
   return (
-    <Container maxWidth="xs" sx={{mt: 2}}>
-      <Navbar />
-      
-    </Container>
+    <div>
+      <Navbar></Navbar>
+      <div className="main-div-users">
+        <RealtimeData></RealtimeData>
+      </div>
+    </div>
   )
+  
+}
+async function getData(){
+  const db = getDatabase();
+  const snapshot = await get(ref(db, 'users/'));
+  let u = Object.keys(snapshot.val());
+  console.log(u);
 }
