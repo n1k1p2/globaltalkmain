@@ -1,6 +1,5 @@
 .main-div-users {
     background-color: #222222;
-    height: 1080px;
     width: 93%;
     padding-left: 7%;
     padding-top: 30px;
@@ -8,10 +7,9 @@
 @media screen and (max-width: 949px) {
     .main-div-users {
         background-color: #222222;
-        height: 1080px;
-        width: 1000px;
+        width: 100vw;
         padding-top: 30px;
-        padding-left: 100px;
+        
     }
     .body, html {
         width: fit-content;

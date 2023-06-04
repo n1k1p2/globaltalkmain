@@ -55,6 +55,13 @@
         color: white;
         font-size: 1rem;
     }
+    .main-table-line-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center
+        
+    }
     .main-div-users{ 
       
         width: 100%;
@@ -66,14 +73,26 @@
     }
     .username-container {
         display: none;
+        display: flex;
+        justify-content: center;
     }
     .name-container {
-        width: 30%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
     .phone-container {
-        width: 30%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
     .country-container {
-        width: 30%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .socialmedias-container {
+        width: 100%;
+        justify-content: center;
     }
 }
