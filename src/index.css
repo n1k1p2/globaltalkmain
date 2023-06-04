@@ -3,6 +3,7 @@
 html, body {
   margin: 0 !important;
   background-color: white !important;
+  overflow-x: hidden;
 }
 
 code {

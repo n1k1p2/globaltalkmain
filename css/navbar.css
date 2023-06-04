@@ -1130,4 +1130,9 @@ ul {
   .navbar {
     margin-left: -10px;
   }
+}
+@media screen and (max-width: 949px) {
+  .navbar {
+    display: none;
+  }
 }/*# sourceMappingURL=navbar.css.map */

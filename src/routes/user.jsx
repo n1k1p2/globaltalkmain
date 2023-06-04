@@ -10,6 +10,7 @@ import React from 'react';
 import { onValue, query, } from 'firebase/database';
 import { RealtimeData } from "../realtimeData/index";
 import './user.css';
+
 export default function User() {
   let navigate = useNavigate();
   let [email, setEmail] = useState("");
@@ -25,11 +26,33 @@ export default function User() {
     endSession();
     navigate("/login");
   }
-  getData();
+  
   return (
     <div>
       <Navbar></Navbar>
+      
       <div className="main-div-users">
+      <nav className="navbar-mobile" role="navigation">
+  <div id="menuToggle">
+
+    <input type="checkbox" />
+    
+
+    <span></span>
+    <span></span>
+    <span></span>
+    
+
+    <ul id="menu">
+      <a href="#"><li>Home</li></a>
+      <a href="#"><li>My Profile</li></a>
+      <a href="#"><li>Messages</li></a>
+      <a href="#"><li>Tasks</li></a>
+      <a href="#"><li>Help</li></a>
+      <a href="#" onClick={onLogout}><li>Logout</li></a>
+    </ul>
+  </div>
+</nav>
         <RealtimeData></RealtimeData>
       </div>
     </div>
