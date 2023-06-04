@@ -14,7 +14,7 @@ import ErrorPage from "./error-page";
 import Login from "./routes/login";
 import Register from "./routes/register";
 import User from "./routes/user";
-
+import Socialmedias from "./routes/stepsocialmedias";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +33,11 @@ const router = createBrowserRouter([
     path: "/user",
     element: <User/>,
   },
+  {
+    path: "/user",
+    element: <Socialmedias/>,
+  },
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

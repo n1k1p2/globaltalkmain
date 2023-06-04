@@ -29,7 +29,7 @@ export default function Register() {
     event.preventDefault();
 
     // validate the inputs
-    if (!email || !password ) {
+    if (!email || !password || !username ) {
       setError("Please fill out all the fields.");
       return;
     }
@@ -105,6 +105,7 @@ export default function Register() {
           variant="outlined"
           autoComplete="phone"
           value={phoneNumber}
+          placeholder="With region for example(+7..., +212)"
           onChange={(e) => setPhoneNumber(e.target.value)}
           sx={{mt: 1}}
           fullWidth

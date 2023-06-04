@@ -19,6 +19,9 @@ const onLogout = () => {
       <a href="#" class="navbar__link"><i data-feather="home" className='icon-12'></i><span>Home</span></a>
     </li>
     <li class="navbar__item">
+      <a href="#" class="navbar__link"><i data-feather="users"></i><span>My Profile</span></a>        
+    </li>
+    <li class="navbar__item">
       <a href="#" class="navbar__link"><i data-feather="message-square"></i><span>Messages</span></a>        
     </li>
     
