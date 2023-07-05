@@ -16,7 +16,7 @@ const onLogout = () => {
       <nav className="navbar">
   <ul className="navbar__menu">
     <li className="navbar__item">
-      <a href="/user" className="navbar__link"><i data-feather="home" className='icon-12'></i><span>Home</span></a>
+      <a href="/user" className="navbar__link"><i data-feather="home" className='icon-12'></i><span>Friends</span></a>
     </li>
     <li className="navbar__item">
       <a href="#" className="navbar__link"><i data-feather="users"></i><span>My Profile</span></a>        

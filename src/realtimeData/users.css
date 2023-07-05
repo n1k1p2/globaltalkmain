@@ -16,7 +16,9 @@
     height: 40px;
     border-radius: 100%;
 }
-
+.h1-name {
+    color: #CB6CE6 !important;
+}
 .main-table-line-div {
     display: flex;
     flex-direction: row;
