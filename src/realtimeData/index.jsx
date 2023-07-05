@@ -5,6 +5,7 @@ import { getDatabase } from "firebase/database";
 import './users.css';
 import avatarlogo from "../imgs/userlogo.jpg";
 import whatsapplogo from "../imgs/whatsapplogo.png";
+import globaltalkimage from "../imgs/pv250JUi7JI.jpg";
 const db = getDatabase();
 export class RealtimeData extends React.Component{
     constructor(){
@@ -32,7 +33,7 @@ export class RealtimeData extends React.Component{
                         let walink = "https://wa.me/" + row.data.phoneNumber;
                     return (
                         <div className='main-table-line-div'>
-                        <img src={avatarlogo} className='avatar-img'></img>
+                        <img src={globaltalkimage} className='avatar-img'></img>
                         <div className='username-container'><h1>{'@'+row.key}</h1></div>
                         <div className='name-container'><h1>{row.data.name}</h1></div>
                         <div className='phone-container'><h1>{row.data.phoneNumber}</h1></div>

@@ -11,6 +11,7 @@ import { onValue, query, } from 'firebase/database';
 import { RealtimeData } from "../realtimeData/index";
 import './user.css';
 
+
 export default function User() {
   let navigate = useNavigate();
   let [email, setEmail] = useState("");
