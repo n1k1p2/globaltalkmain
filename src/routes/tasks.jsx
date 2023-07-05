@@ -43,7 +43,7 @@ export default function Tasks() {
 
     <ul id="menu">
       <a href="/user"><li>Friends</li></a>
-      <a href="#"><li>Tasks</li></a>
+      <a href="/tasks"><li>Tasks</li></a>
       <a href=""><li>My Profile</li></a>
       <a href="#"><li>Help</li></a>
       <a href="/globalreading"><li>Global.Reading</li></a>
