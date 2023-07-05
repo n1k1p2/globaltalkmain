@@ -1,0 +1,11 @@
+.reading-container {
+    display: flex;
+
+}
+.reading-description {
+    display: flex;
+}
+.reading-title {
+    display: flex;
+    flex-direction: row;
+}

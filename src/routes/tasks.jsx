@@ -9,10 +9,9 @@ import { getDatabase, ref, child, get, limitToLast } from "firebase/database";
 import React from 'react';
 import { onValue, query, } from 'firebase/database';
 import { RealtimeData } from "../realtimeData/index";
-import './user.css';
-
-export default function User() {
-  let navigate = useNavigate();
+import './tasks.css';
+export default function Tasks() {
+    let navigate = useNavigate();
   let [email, setEmail] = useState("");
   useEffect(() => {
     if (!isLoggedIn()) {
@@ -31,7 +30,6 @@ export default function User() {
     <div>
       <Navbar></Navbar>
       
-      <div className="main-div-users">
       <nav className="navbar-mobile" role="navigation">
   <div id="menuToggle">
 
@@ -48,21 +46,28 @@ export default function User() {
       <a href=""><li>My Profile</li></a>
       <a href="/globalreading"><li>Global.Reading</li></a>
       <a href="#"><li>Messages</li></a>
-      <a href="/tasks"><li>Tasks</li></a>
+      <a href="#"><li>Tasks</li></a>
       <a href="#"><li>Help</li></a>
       <a href="#" onClick={onLogout}><li>Logout</li></a>
     </ul>
   </div>
 </nav>
-        <RealtimeData></RealtimeData>
-      </div>
+        <div className="div-instructions">
+            <h1>INSTRUCTIONS</h1>
+            <div className="div-steps">
+                <h2>STEP 1.</h2>
+                <h3>Participants are required to choose a language exchange partner from the available list of candidates on the globaltalk.pro website</h3>
+                <h2>STEP 2.</h2>
+                <h3>You should then arrange a call with your chosen partner either through voice or video call. During this call, you will discuss the topic provided by the project instructors.</h3>
+                <h2>STEP 3.</h2>
+                <h3>You will create a written summary about a call and send it to your instructor.</h3>
+            </div>
+            <Button variant="contained" href="https://drive.google.com/file/d/1rCTVQ_7b74C5iYNWETQ2u17-0iBSYOJY/view?usp=sharing" target="_blank">
+  WEEK 1 TASK
+</Button>
+        </div>
+        
     </div>
   )
   
-}
-async function getData(){
-  const db = getDatabase();
-  const snapshot = await get(ref(db, 'users/'));
-  let u = Object.keys(snapshot.val());
-  console.log(u);
 }

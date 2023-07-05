@@ -15,6 +15,8 @@ import Login from "./routes/login";
 import Register from "./routes/register";
 import User from "./routes/user";
 import Socialmedias from "./routes/stepsocialmedias";
+import Globalreading from './routes/globalreading';
+import Tasks from './routes/tasks';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,17 +36,19 @@ const router = createBrowserRouter([
     element: <User/>,
   },
   {
-    path: "/user",
-    element: <Socialmedias/>,
+    path: "/globalreading",
+    element: <Globalreading/>,
+  },
+  {
+    path: "/tasks",
+    element: <Tasks/>,
   },
   
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     <RouterProvider router={router}/>
-  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
